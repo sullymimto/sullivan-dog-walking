@@ -2,62 +2,115 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sullivan's Dog Walking</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sullivan's Dog Walking</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f0f8f0;
-        text-align: center;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    header {
-        background: #4CAF50;
-        color: white;
-        padding: 40px 20px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8ff;
+    color: #222;
+    line-height: 1.6;
+}
 
-    h1 {
-        margin: 0;
-    }
+header {
+    background: linear-gradient(135deg, #0066cc, #3399ff);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
 
-    .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px;
-    }
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
 
-    .card {
-        background: white;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+header p {
+    font-size: 1.2rem;
+}
 
-    iframe {
-        width: 100%;
-        height: 1200px;
-        border: none;
-    }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
 
-    footer {
-        padding: 20px;
-        color: #666;
-    }
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.price-box {
+    flex: 1;
+    min-width: 220px;
+    background: #eaf3ff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.price {
+    font-size: 2rem;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+iframe {
+    width: 100%;
+    height: 1200px;
+    border: none;
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
 </style>
 
-
 </head>
+
 <body>
 
 <header>
     <h1>🐶 Sullivan's Dog Walking</h1>
-    <p>Friendly • Reliable • Affordable</p>
+    <p>Proudly serving El Dorado Hills, California</p>
 </header>
 
 <div class="container">
@@ -66,23 +119,51 @@
 <div class="card">
     <h2>About Me</h2>
     <p>
-        Hi! I'm Sullivan. I offer dog walking services for local families.
+        Hi! I'm Sullivan a 14yro from El Dorado Hills. I provide affordable and reliable dog walking services
+        for families in the El Dorado Hills area. My goal is to keep your dog
+        active, happy, and well cared for.
     </p>
 </div>
 
 <div class="card">
+    <h2>Dog Gallery</h2>
+
+    <div class="gallery">
+        <img src="images/dog1.jpg" alt="Dog">
+        <img src="images/dog2.jpg" alt="Dog">
+        <img src="images/dog3.jpg" alt="Dog">
+    </div>
+</div>
+
+<div class="card">
     <h2>Pricing</h2>
-    <p>30 Minute Walk — $10</p>
-    <p>60 Minute Walk — $15</p>
+
+    <div class="pricing">
+        <div class="price-box">
+            <h3>30 Minute Walk</h3>
+            <div class="price">$10</div>
+        </div>
+
+        <div class="price-box">
+            <h3>60 Minute Walk</h3>
+            <div class="price">$15</div>
+        </div>
+    </div>
 </div>
 
 <div class="card">
     <h2>Book a Walk</h2>
 
     <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLScyYzW-h102cMgvxZxAUhOzjMQc7CoRGhE7nir8V73APMmHXw/viewform?embedded=true">
+    src="https://docs.google.com/forms/d/e/1FAIpQLScyYzW-h102cMgvxZxAUhOzjMQc7CoRGhE7nir8V73APMmHXw/viewform?embedded=true">
     </iframe>
+</div>
 
+<div class="card">
+    <h2>Service Area</h2>
+    <p>
+        Currently serving dog owners throughout El Dorado Hills, California.
+    </p>
 </div>
 
 
