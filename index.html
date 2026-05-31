@@ -4,173 +4,271 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sullivan's Dog Walking</title>
+<title>Sullivan's Dog Walking | El Dorado Hills</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f8ff;
-    color: #222;
-    line-height: 1.6;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7faff;
+    color:#222;
+    line-height:1.6;
 }
 
-header {
-    background: linear-gradient(135deg, #0066cc, #3399ff);
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
+.hero{
+    background:linear-gradient(135deg,#0056b3,#1e90ff);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
 }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:15px;
 }
 
-header p {
-    font-size: 1.2rem;
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px;
+.cta{
+    display:inline-block;
+    margin-top:25px;
+    background:white;
+    color:#0056b3;
+    text-decoration:none;
+    font-weight:bold;
+    padding:14px 28px;
+    border-radius:50px;
 }
 
-.card {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:40px 20px;
 }
 
-h2 {
-    color: #0066cc;
-    margin-bottom: 15px;
+.section{
+    margin-bottom:50px;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
 }
 
-.gallery img {
-    width: 300px;
-    max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+.about{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    align-items:center;
 }
 
-.pricing {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.about img{
+    width:350px;
+    max-width:100%;
+    border-radius:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
 }
 
-.price-box {
-    flex: 1;
-    min-width: 220px;
-    background: #eaf3ff;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
+.about-text{
+    flex:1;
+    min-width:280px;
 }
 
-.price {
-    font-size: 2rem;
-    color: #0066cc;
-    font-weight: bold;
+h2{
+    color:#0056b3;
+    margin-bottom:15px;
+    font-size:2rem;
 }
 
-iframe {
-    width: 100%;
-    height: 1200px;
-    border: none;
-    border-radius: 12px;
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #666;
+.price-card{
+    background:#eef6ff;
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
 }
+
+.price-card h3{
+    color:#0056b3;
+}
+
+.price{
+    font-size:2rem;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+iframe{
+    width:100%;
+    height:1200px;
+    border:none;
+    border-radius:20px;
+}
+
+footer{
+    background:#0056b3;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<header>
+<section class="hero">
     <h1>🐶 Sullivan's Dog Walking</h1>
-    <p>Proudly serving El Dorado Hills, California</p>
-</header>
+
+
+<p>
+    Affordable, reliable dog walking services for families
+    throughout El Dorado Hills, California.
+</p>
+
+<a class="cta" href="#booking">
+    Book a Walk
+</a>
+
+
+</section>
 
 <div class="container">
 
 
-<div class="card">
-    <h2>About Me</h2>
-    <p>
-        Hi! I'm Sullivan a 14yro from El Dorado Hills. I provide affordable and reliable dog walking services
-        for families in the El Dorado Hills area. My goal is to keep your dog
-        active, happy, and well cared for.
-    </p>
-</div>
+<section class="section">
 
-<div class="card">
-    <h2>Dog Gallery</h2>
+    <div class="card about">
 
-    <div class="gallery">
-        <img src="images/dog1.jpg" alt="Dog">
-        <img src="images/dog2.jpg" alt="Dog">
-        <img src="images/dog3.jpg" alt="Dog">
+        <img src="images/autumn.png" alt="Autumn the Goldendoodle">
+
+        <div class="about-text">
+
+            <h2>Meet Autumn & Me</h2>
+
+            <p>
+                Hi! I'm Sullivan, and I provide dog walking services
+                throughout El Dorado Hills.
+            </p>
+
+            <br>
+
+            <p>
+                This is my dog, Autumn. Spending time with dogs has
+                always been one of my favorite things, and that's what
+                inspired me to start helping local families keep their
+                dogs active, healthy, and happy.
+            </p>
+
+            <br>
+
+            <p>
+                Whether your dog needs exercise, attention, or a walk
+                while you're busy, I'd be happy to help.
+            </p>
+
+        </div>
+
     </div>
-</div>
 
-<div class="card">
-    <h2>Pricing</h2>
+</section>
+
+<section class="section">
+
+    <h2>Services & Pricing</h2>
 
     <div class="pricing">
-        <div class="price-box">
+
+        <div class="price-card">
             <h3>30 Minute Walk</h3>
             <div class="price">$10</div>
         </div>
 
-        <div class="price-box">
+        <div class="price-card">
             <h3>60 Minute Walk</h3>
             <div class="price">$15</div>
         </div>
-    </div>
-</div>
 
-<div class="card">
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Why Choose Me?</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            🐾 Friendly and responsible
+        </div>
+
+        <div class="feature">
+            📅 Flexible scheduling
+        </div>
+
+        <div class="feature">
+            💲 Affordable pricing
+        </div>
+
+        <div class="feature">
+            🏡 Local to El Dorado Hills
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="booking">
+
     <h2>Book a Walk</h2>
 
-    <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLScyYzW-h102cMgvxZxAUhOzjMQc7CoRGhE7nir8V73APMmHXw/viewform?embedded=true">
-    </iframe>
-</div>
+    <div class="card">
 
-<div class="card">
-    <h2>Service Area</h2>
-    <p>
-        Currently serving dog owners throughout El Dorado Hills, California.
-    </p>
-</div>
+        <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScyYzW-h102cMgvxZxAUhOzjMQc7CoRGhE7nir8V73APMmHXw/viewform?embedded=true">
+        </iframe>
+
+    </div>
+
+</section>
 
 
 </div>
 
 <footer>
-    © 2026 Sullivan's Dog Walking
+    © 2026 Sullivan's Dog Walking • El Dorado Hills, California
 </footer>
 
 </body>
