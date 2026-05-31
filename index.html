@@ -2,114 +2,57 @@
 
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sullivan's Dog Walking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sullivan's Dog Walking</title>
 
+```
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f8f0;
+        text-align: center;
+    }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f4f9f4;
-    color:#333;
-}
+    header {
+        background: #4CAF50;
+        color: white;
+        padding: 40px 20px;
+    }
 
-header{
-    background:linear-gradient(135deg,#4CAF50,#2E8B57);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
+    h1 {
+        margin: 0;
+    }
 
-header h1{
-    font-size:3rem;
-    margin-bottom:15px;
-}
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
 
-header p{
-    font-size:1.2rem;
-}
+    .card {
+        background: white;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:30px;
-}
+    iframe {
+        width: 100%;
+        height: 1200px;
+        border: none;
+    }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:25px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-}
-
-h2{
-    color:#2E8B57;
-    margin-bottom:15px;
-}
-
-.services{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.service-box{
-    flex:1;
-    min-width:220px;
-    background:#e8f5e9;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.service-box h3{
-    margin-bottom:10px;
-}
-
-.price{
-    font-size:1.5rem;
-    color:#4CAF50;
-    font-weight:bold;
-}
-
-.book-btn{
-    display:inline-block;
-    margin-top:20px;
-    background:#4CAF50;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:8px;
-    transition:0.3s;
-}
-
-.book-btn:hover{
-    background:#388e3c;
-}
-
-iframe{
-    width:100%;
-    height:1200px;
-    border:none;
-    border-radius:12px;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    color:#666;
-}
+    footer {
+        padding: 20px;
+        color: #666;
+    }
 </style>
+```
 
 </head>
-
 <body>
 
 <header>
@@ -123,45 +66,23 @@ footer{
 <div class="card">
     <h2>About Me</h2>
     <p>
-        Hi! I'm Sullivan. I provide dog walking services for local families.
-        My goal is to help keep your dog active, happy, and well exercised.
+        Hi! I'm Sullivan. I offer dog walking services for local families.
     </p>
 </div>
 
 <div class="card">
-    <h2>Services & Pricing</h2>
-
-    <div class="services">
-        <div class="service-box">
-            <h3>30 Minute Walk</h3>
-            <div class="price">$10</div>
-        </div>
-
-        <div class="service-box">
-            <h3>60 Minute Walk</h3>
-            <div class="price">$15</div>
-        </div>
-    </div>
+    <h2>Pricing</h2>
+    <p>30 Minute Walk — $10</p>
+    <p>60 Minute Walk — $15</p>
 </div>
 
 <div class="card">
-    <h2>📅 Book a Walk</h2>
-    <p style="margin-bottom:20px;">
-        Fill out the booking form below and I'll contact you to confirm your appointment.
-    </p>
+    <h2>Book a Walk</h2>
 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyYzW-h102cMgvxZxAUhOzjMQc7CoRGhE7nir8V73APMmHXw/viewform?embedded=true">
+    <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScyYzW-h102cMgvxZxAUhOzjMQc7CoRGhE7nir8V73APMmHXw/viewform?embedded=true">
     </iframe>
-</div>
 
-<div class="card">
-    <h2>Why Choose Me?</h2>
-    <ul style="padding-left:20px; line-height:1.8;">
-        <li>Friendly and responsible</li>
-        <li>Flexible scheduling</li>
-        <li>Affordable prices</li>
-        <li>Local service</li>
-    </ul>
 </div>
 ```
 
