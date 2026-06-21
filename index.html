@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sullivan's Dog Walking | El Dorado Hills</title>
+
+<title>Sullivan's Dog Walking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,284 +16,448 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7faff;
+    font-family:'Poppins',sans-serif;
+    background:#f8fbff;
     color:#222;
-    line-height:1.6;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-weight:800;
+    color:#0077ff;
+    font-size:1.3rem;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    margin-left:20px;
+    font-weight:600;
 }
 
 .hero{
-    background:linear-gradient(135deg,#0056b3,#1e90ff);
+    min-height:100vh;
+    background:linear-gradient(135deg,#0077ff,#00bfff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
     color:white;
-    padding:80px 20px;
+    padding:120px 20px 60px;
+}
+
+.hero-content{
+    max-width:1200px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:50px;
+}
+
+.hero-text{
+    flex:1;
+    min-width:300px;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.hero-buttons a{
+    display:inline-block;
+    padding:15px 30px;
+    margin-right:15px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.primary-btn{
+    background:white;
+    color:#0077ff;
+}
+
+.secondary-btn{
+    border:2px solid white;
+    color:white;
+}
+
+.hero-image{
+    flex:1;
     text-align:center;
 }
 
-.hero h1{
-    font-size:3.5rem;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:1.2rem;
-    max-width:700px;
-    margin:auto;
-}
-
-.cta{
-    display:inline-block;
-    margin-top:25px;
-    background:white;
-    color:#0056b3;
-    text-decoration:none;
-    font-weight:bold;
-    padding:14px 28px;
-    border-radius:50px;
-}
-
-.container{
-    max-width:1150px;
-    margin:auto;
-    padding:40px 20px;
+.hero-image img{
+    width:420px;
+    max-width:100%;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
 
 .section{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.7rem;
+    color:#0077ff;
     margin-bottom:50px;
 }
 
-.card{
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.price-card{
     background:white;
-    border-radius:20px;
     padding:30px;
-    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.price-card:hover{
+    transform:translateY(-10px);
+}
+
+.price-card h3{
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:2.2rem;
+    font-weight:800;
+    color:#0077ff;
 }
 
 .about{
     display:flex;
     flex-wrap:wrap;
-    gap:30px;
     align-items:center;
+    gap:40px;
 }
 
 .about img{
-    width:350px;
+    width:400px;
     max-width:100%;
     border-radius:20px;
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
 }
 
 .about-text{
     flex:1;
-    min-width:280px;
 }
 
-h2{
-    color:#0056b3;
+.about-text h2{
+    color:#0077ff;
     margin-bottom:15px;
-    font-size:2rem;
-}
-
-.pricing{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.price-card{
-    background:#eef6ff;
-    border-radius:16px;
-    padding:25px;
-    text-align:center;
-}
-
-.price-card h3{
-    color:#0056b3;
-}
-
-.price{
-    font-size:2rem;
-    font-weight:bold;
-    margin-top:10px;
+    font-size:2.2rem;
 }
 
 .features{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    gap:25px;
 }
 
 .feature{
     background:white;
-    padding:20px;
-    border-radius:16px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
 
-iframe{
-    width:100%;
-    height:1200px;
-    border:none;
-    border-radius:20px;
+.booking{
+    background:linear-gradient(135deg,#0077ff,#00bfff);
+    color:white;
+    border-radius:30px;
+    padding:60px;
+    text-align:center;
+}
+
+.booking h2{
+    margin-bottom:15px;
+}
+
+.booking-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:white;
+    color:#0077ff;
+    text-decoration:none;
+    font-weight:700;
+    padding:15px 35px;
+    border-radius:50px;
 }
 
 footer{
-    background:#0056b3;
-    color:white;
     text-align:center;
-    padding:25px;
+    padding:40px;
+    background:#eef6ff;
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+    font-size:2.7rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+.booking{
+    padding:40px 20px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
-<section class="hero">
-    <h1>🐶 Sullivan's Dog Walking</h1>
+<nav>
+<div class="nav-container">
+<div class="logo">🐶 Sullivan's Dog Walking</div>
 
+<div class="nav-links">
+<a href="#pricing">Pricing</a>
+<a href="#about">About</a>
+<a href="#book">Book</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>Dog Walking & Washing in El Dorado Hills</h1>
 
 <p>
-    Affordable, reliable dog walking services for families
-    throughout El Dorado Hills, California.
+Friendly, reliable, and affordable pet care serving
+El Dorado Hills and Serrano.
 </p>
 
-<a class="cta" href="#booking">
-    Book a Walk
+<div class="hero-buttons">
+<a href="#book" class="primary-btn">Book Now</a>
+<a href="#pricing" class="secondary-btn">View Prices</a>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="autumn.png" alt="Autumn the Goldendoodle">
+</div>
+
+</div>
+
+</section>
+
+<section id="pricing" class="section">
+
+<h2 class="section-title">Services & Pricing</h2>
+
+<div class="pricing-grid">
+
+<div class="price-card">
+<h3>🐕 30 Minute Walk</h3>
+<div class="price">$15</div>
+<p>Quick exercise and fresh air.</p>
+</div>
+
+<div class="price-card">
+<h3>🐕 45 Minute Walk</h3>
+<div class="price">$20</div>
+<p>Perfect for active dogs.</p>
+</div>
+
+<div class="price-card">
+<h3>🐕 60 Minute Walk</h3>
+<div class="price">$25</div>
+<p>A full hour of fun and exercise.</p>
+</div>
+
+<div class="price-card">
+<h3>🛁 Dog Wash</h3>
+<div class="price">$35</div>
+<p>Wash, shampoo, and towel dry.</p>
+</div>
+
+<div class="price-card">
+<h3>⭐ Walk + Wash</h3>
+<div class="price">$45</div>
+<p>Walk plus a complete wash.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<div class="about">
+
+<img src="autumn.png" alt="Autumn the Goldendoodle">
+
+<div class="about-text">
+
+<h2>Meet Autumn</h2>
+
+<p>
+Autumn is my Goldendoodle and the inspiration behind this business.
+I love spending time with dogs and helping local families keep their pets happy, healthy, and active.
+</p>
+
+<br>
+
+<p>
+As a local teen in El Dorado Hills, I wanted to start a business that helps pet owners while doing something I genuinely enjoy.
+</p>
+
+<br>
+
+<p>
+📍 Proudly serving El Dorado Hills and Serrano.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Why Choose Me?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>🐾 Dog Lover</h3>
+<p>I genuinely enjoy spending time with dogs.</p>
+</div>
+
+<div class="feature">
+<h3>📅 Flexible Scheduling</h3>
+<p>Choose a time that works for you.</p>
+</div>
+
+<div class="feature">
+<h3>🏡 Local</h3>
+<p>Serving families in El Dorado Hills and Serrano.</p>
+</div>
+
+<div class="feature">
+<h3>💲 Affordable</h3>
+<p>Quality service at fair prices.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="book" class="section">
+
+<div class="booking">
+
+<h2>Ready to Book?</h2>
+
+<p>
+Use my online booking form to schedule a walk or dog wash.
+</p>
+
+<br>
+
+<a
+class="booking-btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLScyYzW-h102cMgvxZxAUhOzjMQc7CoRGhE7nir8V73APMmHXw/viewform"
+target="_blank">
+Book Online
 </a>
 
-
-</section>
-
-<div class="container">
-
-
-<section class="section">
-
-    <div class="card about">
-
-        <img src="autumn.png" alt="Autumn the Goldendoodle">
-
-        <div class="about-text">
-
-            <h2>Meet Autumn & Me</h2>
-
-            <p>
-                Hi! I'm Sullivan, and I provide dog walking services
-                throughout El Dorado Hills.
-            </p>
-
-            <br>
-
-            <p>
-                This is my dog, Autumn. Spending time with dogs has
-                always been one of my favorite things, and that's what
-                inspired me to start helping local families keep their
-                dogs active, healthy, and happy.
-            </p>
-
-            <br>
-
-            <p>
-                Whether your dog needs exercise, attention, or a walk
-                while you're busy, I'd be happy to help.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 <section class="section">
 
+<h2 class="section-title">Scan to Book</h2>
 
-<h2>Services & Pricing</h2>
+<div style="text-align:center;">
 
-<div class="pricing">
+<p style="margin-bottom:20px;">
+Use your phone camera to scan the QR code and book instantly.
+</p>
 
-    <div class="price-card">
-        <h3>30 Minute Walk</h3>
-        <div class="price">$15</div>
-        <p>Perfect for a quick exercise break.</p>
-    </div>
-
-    <div class="price-card">
-        <h3>45 Minute Walk</h3>
-        <div class="price">$20</div>
-        <p>Extra time for active dogs.</p>
-    </div>
-
-    <div class="price-card">
-        <h3>60 Minute Walk</h3>
-        <div class="price">$25</div>
-        <p>A full hour of exercise and fun.</p>
-    </div>
-
-    <div class="price-card">
-        <h3>Dog Wash</h3>
-        <div class="price">$35</div>
-        <p>Basic wash, shampoo, and towel dry.</p>
-    </div>
-
-    <div class="price-card">
-        <h3>Walk + Wash Package</h3>
-        <div class="price">$45</div>
-        <p>60-minute walk followed by a Dog Wash(See above for more).</p>
-    </div>
+<img
+src="qr-code.png"
+alt="Booking QR Code"
+style="
+max-width:250px;
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+">
 
 </div>
 
-
 </section>
-
-
-<section class="section">
-
-    <h2>Why Choose Me?</h2>
-
-    <div class="features">
-
-        <div class="feature">
-            🐾 Friendly and responsible
-        </div>
-
-        <div class="feature">
-            📅 Flexible scheduling
-        </div>
-
-        <div class="feature">
-            💲 Affordable pricing
-        </div>
-
-        <div class="feature">
-            🏡 Local to El Dorado Hills
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section" id="booking">
-
-    <h2>Book a Walk</h2>
-
-    <div class="card">
-
-        <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLScyYzW-h102cMgvxZxAUhOzjMQc7CoRGhE7nir8V73APMmHXw/viewform?embedded=true">
-        </iframe>
-
-    </div>
-
-</section>
-
-
-</div>
 
 <footer>
-    © 2026 Sullivan's Dog Walking • El Dorado Hills, California
+
+<h3>🐶 Sullivan's Dog Walking</h3>
+
+<br>
+
+<p>
+Serving El Dorado Hills & Serrano
+</p>
+
+<br>
+
+<p>
+© 2026 Sullivan's Dog Walking
+</p>
+
 </footer>
 
 </body>
